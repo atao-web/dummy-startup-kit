@@ -1,0 +1,44 @@
+{
+  "name": "dummy-startup-kit",
+  "version": "1.0.0",
+  "description": "A nice greeter. See [Step by step: Building and publishing an NPM Typescript package](https://itnext.io/step-by-step-building-and-publishing-an-npm-typescript-package-44fe7164964c), Carl-Johan Kihl, May 30, 2018",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atao-web/dummy-startup-kit.git"
+  },
+  "keywords": [
+    "Hello",
+    "Greeter"
+  ],
+  "author": "C-J & PR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atao-web/dummy-startup-kit/issues"
+  },
+  "homepage": "https://github.com/atao-web/dummy-startup-kit#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.24",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.3"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "types": "lib/index.d.ts"
+}
