@@ -257,7 +257,125 @@ jq '.main="lib/index.js"' package.json | sponge package.json \
   && jq '.author="C-J & PR"' package.json | sponge package.json
 
 git add -A && git commit -m "Setup Package"
+# [master d2d1181] Setup Package
+#  11 files changed, 5366 insertions(+)
+#  create mode 100644 .gitignore
+#  create mode 100644 .prettierrc
+#  create mode 100644 jestconfig.json
+#  create mode 100644 package-lock.json
+#  create mode 100644 package.json
+#  create mode 100644 src/__tests__/Greeter.test.ts
+#  create mode 100644 src/index.ts
+#  create mode 100644 tsconfig.json
+#  create mode 100644 tslint.json
+
 git push
+# Username for 'https://github.com': atao-web
+# Password for 'https://atao-web@github.com': 
+# Décompte des objets: 15, fait.
+# Delta compression using up to 4 threads.
+# Compression des objets: 100% (13/13), fait.
+# Écriture des objets: 100% (15/15), 48.07 KiB | 4.37 MiB/s, fait.
+# Total 15 (delta 1), reused 0 (delta 0)
+# remote: Resolving deltas: 100% (1/1), done.
+# To https://github.com/atao-web/dummy-startup-kit.git
+#    8a6ab08..d2d1181  master -> master
+
+
+npm login
+# Username: atao60
+# Password: xxxxx
+# Email: (this IS public) p.m.raoul@gmail.com
+# Logged in as atao60 on https://registry.npmjs.org/.
+
+npm publish
+#
+# > dummy-startup-kit@1.0.0 prepare .
+# > npm run build
+#
+#
+# > dummy-startup-kit@1.0.0 build /home/pierre/DevSpace/aktea-explo/atao-dummy-startup-kit
+# > tsc
+#
+# node_modules/@types/babel__template/index.d.ts:16:28 - error TS2583: Cannot find name 'Set'. Do you need to change your target library? Try changing the `lib` compiler option to es2015 or later.
+#
+# 16     placeholderWhitelist?: Set<string>;
+#                               ~~~
+#
+#
+# Found 1 error.
+#
+# npm ERR! code ELIFECYCLE
+# npm ERR! errno 2
+# npm ERR! dummy-startup-kit@1.0.0 build: `tsc`
+# npm ERR! Exit status 2
+# npm ERR! 
+# npm ERR! Failed at the dummy-startup-kit@1.0.0 build script.
+# npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+# npm ERR! code ELIFECYCLE
+# npm ERR! errno 2
+# npm ERR! dummy-startup-kit@1.0.0 prepare: `npm run build`
+# npm ERR! Exit status 2
+# npm ERR! 
+# npm ERR! Failed at the dummy-startup-kit@1.0.0 prepare script.
+# npm ERR! This is probably not a problem with npm. There is likely additional loggi
+
+npm i -D @types/node
+# npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules/fsevents):
+# npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+#
+# + @types/node@12.12.21
+# added 1 package from 41 contributors and audited 877615 packages in 5.505s
+# found 0 vulnerabilities
+
+npm publish
+#
+# > dummy-startup-kit@1.0.0 prepare .
+# > npm run build
+#
+#
+# > dummy-startup-kit@1.0.0 build /home/pierre/DevSpace/aktea-explo/atao-dummy-startup-kit
+# > tsc
+#
+#
+# > dummy-startup-kit@1.0.0 prepublishOnly .
+# > npm test && npm run lint
+#
+#
+# > dummy-startup-kit@1.0.0 test /home/pierre/DevSpace/aktea-explo/atao-dummy-startup-kit
+# > jest --config jestconfig.json
+#
+#  PASS  src/__tests__/Greeter.test.ts
+#   ✓ My Greeter (3ms)
+#
+# Test Suites: 1 passed, 1 total
+# Tests:       1 passed, 1 total
+# Snapshots:   0 total
+# Time:        2.922s
+# Ran all test suites.
+#
+# > dummy-startup-kit@1.0.0 lint /home/pierre/DevSpace/aktea-explo/atao-dummy-startup-kit
+# > tslint -p tsconfig.json
+#
+# npm notice 
+# npm notice 📦  dummy-startup-kit@1.0.0
+# npm notice === Tarball Contents === 
+# npm notice 1.4kB  package.json  
+# npm notice 10.0kB HISTORY.md    
+# npm notice 219B   README.md     
+# npm notice 56B    lib/index.d.ts
+# npm notice 140B   lib/index.js  
+# npm notice === Tarball Details === 
+# npm notice name:          dummy-startup-kit                       
+# npm notice version:       1.0.0                                   
+# npm notice package size:  3.9 kB                                  
+# npm notice unpacked size: 11.8 kB                                 
+# npm notice shasum:        855a08955bc8497455e9b75c600ffc4239f393d4
+# npm notice integrity:     sha512-sKl9971pp2cch[...]Yx6hd3v2hMUiA==
+# npm notice total files:   5                                       
+# npm notice 
+# + dummy-startup-kit@1.0.0
+
 
 
 ```
